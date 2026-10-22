@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Researcher Registration Form</title>
+     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        .container {
+            max-width: 930px;
+            margin: auto;
+            padding: 25px 6.5% 60px;
+            background-color: white;
+            border-radius: 30px;
+        }
+
+        .heading {
+            text-align: center;
+            color: #c83f4b;
+            font-size: 42px;
+            margin: 0;
+        }
+
+        .subheading {
+            text-align: center;
+            font-size: 36px;
+            margin: 0 0 20px;
+        }
+
+        .intro {
+            font-size: 22px;
+            margin-bottom: 35px;
+        }
+
+        .row {
+            display: flex;
+            gap: 30px;
+        }
+
+        .field {
+            flex: 1;
+            margin-bottom: 28px;
+            min-width: 0;
+        }
+
+        .field label {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 18px 22px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        textarea {
+            height: 125px;
+            resize: vertical;
+        }
+
+        .gender-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 0 15px 14px;
+        }
+
+        .gender {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 14px 35px;
+            gap: 15px;
+        }
+
+        .gender label {
+            font-size: 20px;
+        }
+
+        .topic-label {
+            font-size: 36px;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 19px;
+            line-height: 1.7;
+            margin: 30px 0;
+        }
+
+        .consent input {
+            margin-top: 7px;
+            width: 20px;
+            height: 20px;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            padding: 17px 35px;
+            background-color: #087cf0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0669cc;
+        }
+      
+    </style>
+   
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="heading">Researcher</div>
+        <div class="subheading">Registration Form</div>
+
+        <div class="intro">
+            Please fill in your details to register
+        </div>
+
+        <form action="#">
+
+            <div class="row">
+                <div class="field">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname"
+                           name="firstName"
+                           placeholder="Enter your first name"
+                           >
+                </div>
+
+                <div class="field">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname"
+                           name="lastName"
+                           placeholder="Enter your last name"
+                           >
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob"
+                       name="dob" >
+            </div>
+
+            <div class="gender-title">Gender</div>
+
+            <div class="gender">
+                <label>
+                    <input type="radio" name="gender"
+                           value="Male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender"
+                           value="Female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender"
+                           value="Other">
+                    Other
+                </label>
+            </div>
+
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       >
+            </div>
+
+            <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone"
+                       name="phone" >
+            </div>
+
+            <div class="field">
+                <label for="address">Address</label>
+                <textarea id="address"
+                          name="address"
+                          placeholder="Enter your address here"
+                          ></textarea>
+            </div>
+
+            <div class="field">
+                <label class="topic-label" for="topic">
+                    Topic name
+                </label>
+                <input type="text" id="topic"
+                       name="topic" >
+            </div>
+
+            <div class="consent">
+                <input type="checkbox" id="consent"
+                       name="consent">
+
+                <label for="consent">
+                    I consent to the processing of my personal
+                    data in accordance with the Privacy Policy.
+                </label>
+            </div>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
